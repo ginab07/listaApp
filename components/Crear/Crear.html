@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Crear.css">
+    <title>Crear receta</title>
+</head>
+<body ng-controller="CrearController">
+    <header class="header">
+        <h1 class="header__title">Nueva receta</h1>
+    </header>
+    <section class="form">
+        <label for="name" class="form__label"> Nombre</label>
+        <input type="text" id="name" class="form__input" placeholder="Ingresa nombre nueva receta" ng-model="nameInput">
+        <label for="steps" class="form__label"> Preparación</label>
+        <textarea name="text" rows="4" cols="40" class="form__input" placeholder="" ng-model="stepsInput"></textarea>
+   
+        <a class="form__button" ng-click="crear()">GUARDAR</a>
+    </section>
+    <footer class="footer">
+        <a href="../ListaContactos/ListaContactos.html" class="footer__button">Regresar</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- crearController -->
+    <script src="./CrearController.js"></script>
+</body>
+</html>
